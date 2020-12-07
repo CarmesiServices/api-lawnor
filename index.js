@@ -5,6 +5,13 @@ require('dotenv').config()
 
 const app = express();
 
+// cors
+const cors = require('cors');
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions));
 
 // capture body
 app.use(bodyParser.urlencoded({ extended : false }));
